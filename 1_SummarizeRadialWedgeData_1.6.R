@@ -16,10 +16,10 @@ rm(list=ls()) # clean desk
 
 
 ### 2. Define top directory containing all the data in whatever hierarchical structure ####
-Workdir1 <- "D:/TrainingSchools_QWA/NADEF_QWA_2019_Cody/Analysis/R Analysis/Data"   #directory with the cell and ring data from individual images
-workdir2 <- "D:/TrainingSchools_QWA/NADEF_QWA_2019_Cody/Analysis/R Analysis/Series"   #directory with the full series of cell and ring data for the entire wood pieces
+WD_Input <- "Roxas_files"   #directory with the cell and ring data from individual images
+WD_output <- "Roxas_tree_series"   #directory with the full series of cell and ring data for the entire wood pieces
 
-setwd(Workdir1)
+setwd(WD_Input)
 topfolder <- getwd()
 
 
@@ -91,7 +91,7 @@ for (i in c(nrow(metadata):1))
   
 
 ### 7. Summarize the data ####
-setwd(workdir2)
+setwd(WD_output)
 
 t <- Sys.time()
 
